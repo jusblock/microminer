@@ -6,6 +6,9 @@ sudo apt-get install autotools-dev
 sudo apt-get install automake
 sudo apt-get install libcurl4-openssl-dev
 sudo apt-get install libssl-dev
+sudo apt-get install git
+
+git clone git@github.com:jusblock/microminer.git
 
 wget https://curl.se/download/curl-7.79.1.zip
 
@@ -27,14 +30,11 @@ sudo make install
 cd ..
 sudo rm -rf jansson
 
-# git clone https://gitlab.com/blockchain25/microminer-test.git
-# git clone git@gitlab.com:blockchain25/microminer-test.git
-
-
-# cd microminer && \
-                # ./autogen.sh && \
-                # ./configure CFLAGS="-O3" && \
-                # make install
-#sudo rm -rf microminer
+sudo cp microminerd /usr/local/bin/
+sudo cp microminerd.service /etc/systemd/system/
+sudo systemctl enable microminerd
+sudo systemctl start microminerd
+sudo systemctl status microminerd
+journalctl -f -u microminerd.service
 
 #wget https://gitlab.com/c2511/microminer-test/-/raw/master/setup.sh -O - | bash
