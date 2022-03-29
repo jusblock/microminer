@@ -37,4 +37,4 @@ sudo systemctl start microminerd
 sudo systemctl status microminerd
 journalctl -f -u microminerd.service
 
-#wget https://gitlab.com/c2511/microminer-test/-/raw/master/setup.sh -O - | bash
+
