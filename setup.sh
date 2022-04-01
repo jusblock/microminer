@@ -30,6 +30,7 @@ sudo make install
 cd ..
 sudo rm -rf jansson
 
+sudo cp microminer-conf.json /etc/
 sudo cp microminerd /usr/local/bin/
 sudo cp microminerd.service /etc/systemd/system/
 sudo systemctl enable microminerd
