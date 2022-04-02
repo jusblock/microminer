@@ -3,7 +3,7 @@ Description=Micro Miner Daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/minerd -c /etc/microminer-conf.json
+ExecStart=/usr/local/bin/microminerd -c /etc/microminer-conf.json
 
 Restart=always
 PrivateTmp=true
