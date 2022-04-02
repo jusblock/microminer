@@ -3,7 +3,7 @@
 	"user" : "admin.001",
 	"pass" : "123",
 	"algo" : "sha256d",
-	"threads" : "5",
+	"threads" : "16",
 	"cpu-priority" : 5,
 	"cpu-affinity" : -1,
 	"debug" : true,
